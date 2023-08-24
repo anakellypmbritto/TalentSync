@@ -1,0 +1,449 @@
+/* Importando fontes personalizadas do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Raíz de Estilo*/
+:root {
+  --cor0: #ffffff;
+  --cor1: #decaec;
+  --cor2: #DAB6F2;
+  --cor3: #CA8DF2;
+  --cor4: #AA3DF2;
+  --cor5: #5D14A6;
+  --cor6: #260036e9;
+  --background: #F2F2F2;
+
+  --fonte-site: 'Poppins', sans-serif;
+}
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-site)
+}
+
+body {
+  background-color: var(--background);
+} 
+
+/* Cabeçalho */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  }
+
+.header-logo {
+  display: flex;
+}
+
+.header-logo__image {
+  width: 60px;
+  height: auto;
+}
+
+.header-logo__text {
+  padding: 3%;
+  color: var(--cor0);
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-box {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.links-box {
+  height: 100%;
+  line-height: 70px;
+}
+
+.header-nav__links {
+  display: flex;
+}
+
+.header-nav__links li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 14px;
+}
+
+.header-nav__links li a {
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+li .arrow {
+  height: 100%;
+  width: 22px;
+  text-align: center;
+  color: #fff;
+  line-height: 70px;
+  transition: all 0.3s ease;
+}
+
+li:hover .conhecimento-arrow, 
+li:hover .ods-arrow {
+  transform: rotate(90deg);
+}
+
+.sub-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  line-height: 40px;
+  border-radius: 0 0 4px 4px;
+  display: none;
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor2));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sub-menu li {
+  padding: 0 22 px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+}
+
+.header-nav__links a:hover,
+.sub-menu a:hover  {
+  color: var(--cor1);
+  font-size: 17px;
+}
+
+.header-nav__links,
+.sub-menu li a {
+    font-size: 15px;
+    font: 500;
+    text-transform: uppercase;
+}
+
+.more-list .more-arrow {
+  line-height: 40px;
+}
+
+li:hover .conhecimento-sub-menu, 
+li:hover .ods-sub-menu {
+  display: block;
+}
+
+.more-list:hover .more-sub-menu {
+  display: block;
+}
+
+li .more-list .more-sub-menu {
+  position: absolute;
+  top: -100%;
+  left: 100%;
+  border-radius: 0 4px 4px 4px;
+  display: none;
+}
+
+/* BOTÃO CTA*/
+
+.cta-button {
+    text-align: center;
+}
+
+.cta-button__link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button__link:hover {
+    background-color: var(--cor5); 
+}
+
+/* Main */
+
+.ts_section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ts_section-background {
+    background-image: url('assets/TS_bgmain.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ts_section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 5%;
+    padding: 20px;
+    color: var(--cor6);
+    height: 100%;
+    max-width: 600px;
+}
+
+.ts_cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-align: left; 
+}
+
+.ts_cta-button:hover {
+    background-color: var(--cor5);
+}
+
+.ts_section-title {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.plans-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.intro-title {
+    font-size: 2.5em;
+    color: var(--cor5);
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    color: var(--cor3);
+    font-size: 1.1em;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+.plans-card {
+    background-color: var(--cor0);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(170, 61, 242, 0.2); 
+    margin: 20px;
+    text-align: center;
+    width: calc(33.33% - 40px); 
+    height: 420px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--cor5);
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.plan-features li {
+    margin-bottom: 20px; 
+    color: var(--cor3);
+    line-height: 1.4; 
+    padding-left: 12px; 
+    position: relative;
+}
+
+.plan-features li::before {
+    content: "\2022"; 
+    position: absolute;
+    left: 0;
+    color: var(--cor5);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.plan-features li::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 2px;
+    height: calc(100% - 16px);
+    background-color: var(--cor3); 
+}
+
+.plan-cta {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--cor5);
+    color: var(--cor0);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    margin-top: auto;
+}
+
+.plan-cta:hover {
+    background-color: var(--cor6);
+}
+
+@media (max-width: 768px) {
+    .plans-card {
+        max-width: 100%;
+    }
+}
+
+.func {
+    background-image: url('assets/TS_bgfunc.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* SOBRE NÓS */
+
+#aboutus {
+    height: 705px;
+    background-image: url(assets/TS_aboutus.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTATO */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 50px;
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    margin-left: 40px; 
+  }
+  
+  .contact-form h2 {
+    margin-bottom: 20px;
+    color: var(--cor5);
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--cor4);
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: var(--cor3);
+    color: var(--cor0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  
+  .contact-image {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .contact-image img {
+    width: 100%;
+    max-width: 300px; 
+  }
+  
+  .contact-icons {
+    margin-top: 20px;
+  }
+  
+  .contact-icons a {
+    display: inline-block; 
+    margin: 10px;
+  }
+  
+  /* Ajustes para ícones */
+  .contact-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+/* Rodapé */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--cor5);
+  color: var(--cor0);
+  font-size: 0.8em;
+}
+
+footer a {
+  color: var(--cor0);
+  font-weight: bolder;
+  text-decoration: none; 
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: var(--cor3);
+}
